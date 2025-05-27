@@ -1,0 +1,19 @@
+<mat-toolbar color="warn" class="px-4 bg-warning">
+    <span class="app-title mx-4" >Navbar</span>
+    <span class="spacer"></span>
+    <a mat-raised-button class="m-2" routerLink="/counter">Counter</a>
+    <a mat-raised-button routerLink="/blog">Blog</a>
+  </mat-toolbar>
+  
+  <div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="row w-75">
+      <div class="col text-center">
+        <router-outlet></router-outlet>
+  
+        <!-- <app-counterbutton></app-counterbutton>
+        <app-counterdisplay></app-counterdisplay>
+        <app-custome-counter></app-custome-counter>
+        <app-blog></app-blog> -->
+      </div>
+    </div>
+  </div>

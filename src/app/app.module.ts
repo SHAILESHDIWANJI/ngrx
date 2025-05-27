@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,21 +11,29 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './material.module';
 import { CustomeCounterComponent } from './component/custome-counter/custome-counter.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { blogReducer } from './shared/store/Blog/blog.reducers';
+import { BlogComponent } from './component/blog/blog.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AppState } from './shared/store/global/App.state';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterbuttonComponent,
     CounterdisplayComponent,
-    CustomeCounterComponent
+    CustomeCounterComponent,
+    BlogComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({counter:counterReducer}),
+    StoreModule.forRoot(AppState),
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [
     provideAnimationsAsync()
