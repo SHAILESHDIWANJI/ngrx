@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './shared/counter.reducer';
+import { counterReducer } from './shared/store/counter.reducer';
 import { CounterbuttonComponent } from './component/counterbutton/counterbutton.component';
 import { CounterdisplayComponent } from './component/counterdisplay/counterdisplay.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
