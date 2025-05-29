@@ -6,6 +6,7 @@ import {MatSelectModule} from "@angular/material/select"
 import {MatFormFieldModule} from "@angular/material/form-field"
 import {MatIconModule} from "@angular/material/icon"
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
     exports:[
@@ -15,7 +16,8 @@ MatInputModule,
 MatSelectModule,
 MatFormFieldModule,
 MatIconModule,
-MatToolbarModule
+MatToolbarModule,
+MatDialogModule
     
     ]
 })
