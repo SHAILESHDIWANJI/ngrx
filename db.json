@@ -1,0 +1,9 @@
+{
+    
+    "Blogs": [
+      { "id": 1, "title": "Angular", "description": "Angular is opensourch powered by google" },
+      { "id": 1, "title": "React", "description": "React  is opensourch powered by Meta" },
+      { "id": 1, "title": ".Net", "description": ".Net is opensourch powered by Microsoft" }
+    ]
+  }
+  

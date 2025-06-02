@@ -17,6 +17,9 @@ import { BlogComponent } from './component/blog/blog.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppState } from './shared/store/global/App.state';
 import { AddblogComponent } from './component/addblog/addblog.component';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { BlogEffect } from './shared/store/Blog/blog.effects';
 
 @NgModule({
   declarations: [
@@ -34,11 +37,13 @@ import { AddblogComponent } from './component/addblog/addblog.component';
     StoreModule.forRoot(AppState),
     MaterialModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
-
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    EffectsModule.forRoot([BlogEffect]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [
+   
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
